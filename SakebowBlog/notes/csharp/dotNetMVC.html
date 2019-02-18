@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>.Net环境下MVC框架的介绍</title>
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<link rel="stylesheet" href="../../css/document.css" />
+		<link rel="stylesheet" href="../../css/fonts.css" />
+		<link rel="stylesheet" href="../../css/general.css" />
+		<link rel="stylesheet" href="../../js/layui/css/layui.css" />
+		<script type="text/javascript" src="../../js/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+			layui.use('code', function() {
+				layui.code();
+			});
+		</script>
+		<script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../../js/custom/layout.js"></script>
+	</head>
+
+	<body>
+		<div class="bg alert-hide">
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closePay">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的支付宝.jpg" />
+						<figcaption>支付宝收款码</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信收款.png" />
+						<figcaption>微信收款码</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closeCall">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的QQ账号.jpg" />
+						<figcaption>QQ</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信账号.png" />
+						<figcaption>微信</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert-img alert-hide">
+				<div class="alert-header">
+					<div id="closeImg">关闭</div>
+				</div>
+				<div class="alert-container-img">
+					<figure>
+						<img src=""  id="showImg"/>
+						<figcaption></figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="left-title">
+				<h1>柳景兴的个人博客</h1>
+			</div>
+			<div class="right-title">
+				<div class="title-items"><a href="../../index.html">首页</a></div>
+				<div class="title-items">联系方式</div>
+				<div class="title-items">打赏</div>
+			</div>
+		</div>
+		<div class="container">
+			<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo">
+				<li class="layui-nav-item">
+					<a>目录</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>JavaScript<img src="../../img/icon/javascript.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="useJson.html">Json数据的使用</a>
+									</dd>
+									<dd>
+										<a href="getJson.html">Json数据的获取</a>
+									</dd>
+									<dd>
+										<a>Json数据的发送</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C#<img src="../../img/icon/csharp.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="dotNetMVC.html">.Net环境下的MVC框架</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>学生成绩管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a href="operateDatabase.html">对数据库的操作</a>
+												</dd>
+												<dd>
+													<li class="layui-nav-item">
+														<a>业务操作中的重点</a>
+														<dl class="layui-nav-child">
+															<dd>
+																<a href="signInWithValidation.html">登录和验证</a>
+															</dd>
+															<dd>
+																<a>上传文件</a>
+															</dd>
+															<dd>
+																<a>学生打分</a>
+															</dd>
+															<dd>
+																<a>国家-省份-城市-区县的四级联动</a>
+															</dd>
+														</dl>
+													</li>
+												</dd>
+												<dd>
+													<a>分页插件的使用</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<a>学生学分管理系统</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>Java<img src="../../img/icon/java.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a>网易云音乐的开发者通道</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>纯Servlet的图书管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>环境搭建说明</a>
+												</dd>
+												<dd>
+													<a>前后台交互方式介绍</a>
+												</dd>
+												<dd>
+													<a>不使用插件的分页</a>
+												</dd>
+												<dd>
+													<a>web.xml的配置</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C<img src="../../img/icon/c.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<li class="layui-nav-item">
+											<a>面向对象思想的借鉴</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>面向对象思想简介</a>
+												</dd>
+												<dd>
+													<a>从整体到局部的解析</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>对节点的操作</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>查找节点</a>
+												</dd>
+												<dd>
+													<a>修改节点</a>
+												</dd>
+												<dd>
+													<a>添加节点</a>
+												</dd>
+												<dd>
+													<a>删除节点</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="main-body">
+				<div class="doc">
+					<div class="doc-title">
+						<div class="doc-title-article">.Net环境下MVC框架的介绍</div>
+						<div class="doc-title-author">
+							<div>作者：柳景兴</div>
+							<div>时间：2019年2月16日16点38分</div>
+							<div>关键词：.Net，MVC，使用方法</div>
+						</div>
+					</div>
+					<hr />
+					<div class="doc-content">
+						<p>
+							MVC框架如今也不是什么新颖词汇了。 到如今这个词汇已经不再是哪种语言特有，而是一种思想，将数据库、用户操作、业务管理等功能全部完全区分开， 让程序员更多的专注于业务逻辑而非环境搭建。
+						</p>
+						<div class="doc-content-sub-title">MVC的基本介绍</div>
+						<p>
+							具体来讲，MVC框架分为三层： M是指Model，数据库层，专门用于封装数据库的所有字段和对数据库进行操作的接口以及实现其类； V是指Views，页面层，专门用于展现给用户的界面以及接收用户的各种操作； C是指Controller，控制层，专门用于编辑业务逻辑，不包含任何界面信息、数据库操作。
+						</p>
+						<div class="doc-content-sub-title">VS中制作MVC项目的介绍</div>
+						<p>
+							在项目进行的时候，我们习惯上将用户访问的所有页面存入Views中。 用户在界面上的种种操作将会传入对应的控制器中和该页面同名的方法里面， 而操作以及所产生的数据或将以参数的形式表现，或以从请求中获取的形式。 而这个方法中调用一些Model里面预留的数据库操作接口方法，直接对数据库进行增删改查的操作。
+						</p>
+						<p>
+							当然，Visual Studio还很人性化的跟着创建了一些有用的文件， 比如bootstrap前端模板、jQuery库、多种网页字体，一个模板页和一个web.config配置文件。配置文件中可以自由设置错误处理页面、最大上传文件大小、插件版本等等信息。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample1.png" />
+								<figcaption>图1 - 新创建的ASP项目所具备的文件夹</figcaption>
+							</figure>
+						</div>
+						<p>
+							有趣的是，如果你对Java有所了解，应该很快就会认出来这些对应了Java的哪些内容。
+							甚至与jar包类似的概念也有体现，即在References里面的各种dll插件，全部存放在项目文件夹的bin目录下。
+							但是和Java非常不同的是，Java的所有环境变量都是需要程序员一点点自行设置的，对于刚入坑的萌新来说很不友好。
+							而.Net中所有的都是编译器帮助生成的，甚至帮助修改web.config文件以便适配各式各样的插件。
+							这种情况下，程序员可以专注于业务逻辑，鼠标点一点就配好了相关的环境变量，非常方便。
+							eclipse有相应的生成功能，但是web.xml文件需要自行修改，并且除了.java为后缀名的其他文件代码提示极少；
+							IDEA的代码提示非常丰富，但是文件结构需要自行适配，非常容易还没入门就放弃。
+							这也就是为什么有很多人愿意用VS进行开发。
+						</p>
+						<p>
+							但是有利也必定有弊。
+							.Net力求囊括所有的代码提示和自动生成，.Net平台就变得出奇的冗赘，随便一下载就是8G起步。
+							不仅一般电脑带得吃力，还无法纯净卸载。
+							“全宇宙最强的编辑器，全宇宙最垃圾的平台。”可以说是非常的形象了。
+						</p>
+						<div class="doc-content-sub-title">从零开始创建第一个项目</div>
+						<p>
+							我们先选中这个ASP.Net Web Application作为项目模板，然后确定一个合适的位置，如图1所示，点击确认。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample2.png"/>
+								<figcaption>图2 - 选择ASP</figcaption>
+							</figure>
+						</div>
+						<p>
+							确认后将会弹出下一个弹窗，出现了很多的选项。这些选项都是一些模板，我们选择空模板。
+							也就是说，这个项目会是空的，里面不包含任何文件或者文件夹。
+							然后下面的MVC打上勾，说明里面的文件夹构成是按照MVC的框架进行搭建的。
+							然后VS就会帮助你生成上述的文件和文件夹。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample3.png" />
+								<figcaption>图3 - 选择MVC框架</figcaption>
+							</figure>
+						</div>
+						<p>
+							点击确认，第一个空的MVC项目就这么出来了。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample4.png" />
+								<figcaption>图4 - 完成创建</figcaption>
+							</figure>
+						</div>
+						<p>
+							主页面的introduction只是快速入门的说明文件，并不具有什么实际意义，立即关掉也行，稍微看一下也可以。
+							在这里我就直接关掉了，直接进行下面的说明。
+						</p>
+						<p>
+							在App_Start文件夹下有一个RouteConfig.cs文件。其中的url的其中一种表现就是：
+							网址栏上的网址构成是将controller的名字、controller下某个方法的名字和不定数量的参数构成；
+							另外一种表现是：
+							相应的页面文件访问的路径也应该和这个url保持一致，
+							即在以controller名字为名的文件夹下、在以action名字为名的页面文件。
+							只是这个页面文件并非html、jsp、asp，这将会在后面有所体现。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample5.png" />
+								<figcaption>图5 - 注意url</figcaption>
+							</figure>
+						</div>
+						<p>
+							既然url的构成是controller/action/id，那么我们就从controller开始创建。如下图所示。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample6.png" />
+								<figcaption>图6 - 选择添加Controller</figcaption>
+							</figure>
+						</div>
+						<p>
+							点击确认。同样的，我们选择空的Controller。但是事先声明，生成的文件并不是空的，我们稍后来看。继续确认。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample7.png" />
+								<figcaption>图7 - 选择空的Controller</figcaption>
+							</figure>
+						</div>
+						<p>
+							我们创建一个HomeController。当然，名字是随意的，也可以是SakebowController啥的。点击确认。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample8.png" />
+								<figcaption>图8 - 给Controller设置名字</figcaption>
+							</figure>
+						</div>
+						<p>
+							然后发现，不仅controller不是空的，其中有一个Index方法；Views文件夹下面还多了一个Home文件夹。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample9.png" />
+								<figcaption>图9 - 生成了很多新的东西</figcaption>
+							</figure>
+						</div>
+						<p>
+							不要觉得奇怪，接下来继续做。在Views下面的Home文件夹中新建一个页面。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample10.png" />
+								<figcaption>图10 - 添加页面</figcaption>
+							</figure>
+						</div>
+						<p>
+							这个时候会发现很多不明白的选项出现了。按照下图进行设置。
+							意义分别是：名字为Index，页面不使用模板，不将本页设为其他页面的一部分，启用母版页。点击确认。
+							中间有一个框是不能点击的。我们干脆不用管这个框。
+							其中值得注意的是，这个页面的名字必须是Controller下现有方法名中的一个，否则将会运行报错。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample11.png" />
+								<figcaption>图11 - 给空页面名字设为Index</figcaption>
+							</figure>
+						</div>
+						<p>
+							点击确认，不仅出现了Index页面，内含名为_Layout.cshtml文件的Shared文件夹、
+							包含bootstrap前端模板的Content文件夹、Scripts文件夹和fonts文件夹。
+							这些都是自动生成的。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample12.png" />
+								<figcaption>图12 - 给空页面名字设为Index</figcaption>
+							</figure>
+						</div>
+						<p>
+							点击上方的IIS Express运行页面，页面就出现了。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample13.png" />
+								<figcaption>图13 - 运行页面</figcaption>
+							</figure>
+						</div>
+						<p>
+							但是奇怪的是，页面代码中明显没有除了h2以外的元素，就多了这么多东西，点击Application name甚至还有刷新效果。
+							为什么？我们打开_Layout.cshtml，发现我们多出来的东西全部在这里。
+						</p>
+						<div class="doc-images-frame">
+							<figure>
+								<img src="../../img/notes/csharp/IntroductionExample14.png" />
+								<figcaption>图14 - 母版页</figcaption>
+							</figure>
+						</div>
+						<p>
+							如果在页面创建的时候勾选了使用模板页，就会让你从Shared文件夹下选择现有的母版页。
+							如果在页面创建的时候没有勾选，这个页面就会没有模板也的所有样式。
+							到这里，我没有写任何一句代码，MVC框架就这么搭建完成了。
+							如果是Java呢？你可能现在还在配置xml文件、组织各种package的结构、导入各种jar包……
+							然而.Net下的MVC框架已经搭好了，可以开始按照需求文档一步步完成了。
+						</p>
+						<p>
+							接下来的教程是C#实战的一些零碎教程，并非一个完整的系统。如果你需要代码，请直接去这里：<a href="https://www.github.com/sakebow/20181006">我的GitHub</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="footer">
+			<div class="pay">如果你觉得非常不错，可以选择点击右上角进行打赏。</div>
+		</div>
+	</body>
+
+</html>

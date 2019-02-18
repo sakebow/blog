@@ -1,0 +1,237 @@
+/* 文档部分 */
+
+.doc {
+	min-width: 320px;
+	text-indent: 2em;
+	background: -webkit-linear-gradient(0deg, lightgrey, white);
+	background: -o-linear-gradient(0deg, lightgrey, white);
+	background: -moz-linear-gradient(0deg, lightgrey, white);
+	background: linear-gradient(0deg, lightgrey, white);
+}
+
+
+/* 文档标题 */
+
+.doc-title {
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+
+/* 主标题 */
+
+.doc-title-article {
+	width: 100%;
+	text-align: center;
+	font-family: "方正超粗黑简体";
+	text-indent: 0;
+}
+
+
+/* 作者信息 */
+
+.doc-title-author {
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+	align-items: center;
+	-webkit-align-items: center;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	font-family: "常规方正小标体";
+	text-indent: 0;
+}
+
+
+/* 文档图片 */
+
+.doc-images-frame {
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+	text-align: center;
+}
+
+.doc-images-frame figure {
+	text-indent: 0;
+}
+
+.doc-images-frame img {
+	width: auto;
+}
+
+.doc-images-frame figcaption {
+	text-align: center;
+}
+
+.doc-content {
+	font-family: "宋体";
+}
+
+.doc-content-sub-title {
+	font-family: "常规方正小标体";
+	width: 100%;
+}
+
+.doc-content-quote {
+	border-left-style: solid;
+	border-left-color: lightskyblue;
+	background: -webkit-linear-gradient(180deg, lightgrey, white);
+	background: -o-linear-gradient(180deg, lightgrey, white);
+	background: -moz-linear-gradient(180deg, lightgrey, white);
+	background: linear-gradient(180deg, lightgrey, white);
+}
+
+.layui-code {
+	text-indent: 0;
+}
+
+.example-button {
+	border: solid 0.1em black;
+	border-radius: 0.15em;
+	font-family: "方正剪纸简体";
+}
+/* 100 - 640像素 */
+
+@media screen and (min-width: 100px) and (max-width: 640px) {
+	/* 文档留白 */
+	.doc {
+		padding: 2.4%;
+		width: 95.2%;
+	}
+	/* 大标题 */
+	.doc-title-article {
+		font-size: 2em;
+	}
+	.doc-title-author {
+		font-size: 1em;
+	}
+	.doc-content-sub-title {
+		font-size: 1em;
+	}
+	/* 文档正文部分 */
+	.doc-content p {
+		padding: 0.75%;
+	}
+	.doc-images-frame,
+	.doc-images-frame figure {
+		height: 13em;
+	}
+	.doc-images-frame img {
+		height: 90%;
+		width: auto;
+		max-width: 320px;
+	}
+	.doc-content-quote {
+		padding: 0.75% 1.5%;
+		width: 95%;
+		margin: 0 auto;
+		border-left-width: 0.3em;
+	}
+	.example-button {
+		padding: 0.75% 1.5%;
+	}
+}
+
+
+/* 640 - 1280像素 */
+
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+	/* 文档留白 */
+	.doc {
+		padding: 1.6%;
+		width: 96.8%;
+	}
+	.doc-content-sub-title {
+		font-size: 1.125em;
+	}
+	/* 大标题 */
+	.doc-title-article {
+		font-size: 2.5em;
+	}
+	.doc-title-author {
+		font-size: 1.125em;
+	}
+	/* 文档正文部分 */
+	.doc-content p {
+		padding: 0.625%;
+		font-size: 1.025em;
+	}
+	.doc-images-frame,
+	.doc-images-frame figure {
+		height: 16em;
+	}
+	.doc-images-frame img {
+		height: 93%;
+		width: auto;
+		max-width: 640px;
+	}
+	.doc-content-quote {
+		padding: 0.625% 1.25%;
+		width: 92.5%;
+		margin: 0 auto;
+		border-left-width: 0.4em;
+	}
+	.example-button {
+		padding: 0.625% 1.25%;
+	}
+}
+
+
+/* 1280像素以上 */
+
+@media screen and (min-width: 1280px) {
+	/* 文档留白 */
+	.doc {
+		padding: 0.8%;
+		width: 98.4%;
+	}
+	/* 大标题 */
+	.doc-title-article {
+		font-size: 3em;
+	}
+	.doc-title-author {
+		font-size: 1.25em;
+	}
+	.doc-content-sub-title {
+		font-size: 1.25em;
+	}
+	/* 文档正文部分 */
+	.doc-content p {
+		padding: 0.75%;
+		font-size: 1.15em;
+	}
+	.doc-images-frame,
+	.doc-images-frame figure {
+		height: 19em;
+	}
+	.doc-images-frame img {
+		height: 95%;
+		width: auto;
+		max-width: 896px;
+	}
+	.doc-content-quote {
+		padding: 0.75% 1.5%;
+		width: 90%;
+		margin: 0 auto;
+		border-left-width: 0.5em;
+	}
+	.example-button {
+		padding: 0.75% 1.5%;
+	}
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>json数据的获取</title>
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<link rel="stylesheet" href="../../css/document.css" />
+		<link rel="stylesheet" href="../../css/fonts.css" />
+		<link rel="stylesheet" href="../../css/general.css" />
+		<link rel="stylesheet" href="../../js/layui/css/layui.css" />
+		<script type="text/javascript" src="../../js/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+			layui.use('code', function() {
+				layui.code();
+			});
+		</script>
+		<script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../../js/custom/layout.js"></script>
+		<script type="text/javascript" src="../../js/custom/examples/javascript.js" ></script>
+	</head>
+
+	<body>
+		<div class="bg alert-hide">
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closePay">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的支付宝.jpg" />
+						<figcaption>支付宝收款码</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信收款.png" />
+						<figcaption>微信收款码</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closeCall">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的QQ账号.jpg" />
+						<figcaption>QQ</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信账号.png" />
+						<figcaption>微信</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="left-title">
+				<h1>柳景兴的个人博客</h1>
+			</div>
+			<div class="right-title">
+				<div class="title-items"><a href="../../index.html">首页</a></div>
+				<div class="title-items">联系方式</div>
+				<div class="title-items">打赏</div>
+			</div>
+		</div>
+		<div class="container">
+			<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo">
+				<li class="layui-nav-item">
+					<a>目录</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>JavaScript<img src="../../img/icon/javascript.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="useJson.html">Json数据的使用</a>
+									</dd>
+									<dd>
+										<a href="getJson.html">Json数据的获取</a>
+									</dd>
+									<dd>
+										<a>Json数据的发送</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C#<img src="../../img/icon/csharp.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="../csharp/dotNetMVC.html">.Net环境下的MVC框架</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>学生成绩管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a href="../csharp/operateDatabase.html">对数据库的操作</a>
+												</dd>
+												<dd>
+													<li class="layui-nav-item">
+														<a>业务操作中的重点</a>
+														<dl class="layui-nav-child">
+															<dd>
+																<a href="../csharp/signInWithValidation.html">登录和验证</a>
+															</dd>
+															<dd>
+																<a>上传文件</a>
+															</dd>
+															<dd>
+																<a>学生打分</a>
+															</dd>
+															<dd>
+																<a>国家-省份-城市-区县的四级联动</a>
+															</dd>
+														</dl>
+													</li>
+												</dd>
+												<dd>
+													<a>分页插件的使用</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<a>学生学分管理系统</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>Java<img src="../../img/icon/java.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a>网易云音乐的开发者通道</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>纯Servlet的图书管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>环境搭建说明</a>
+												</dd>
+												<dd>
+													<a>前后台交互方式介绍</a>
+												</dd>
+												<dd>
+													<a>不使用插件的分页</a>
+												</dd>
+												<dd>
+													<a>web.xml的配置</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C<img src="../../img/icon/c.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<li class="layui-nav-item">
+											<a>面向对象思想的借鉴</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>面向对象思想简介</a>
+												</dd>
+												<dd>
+													<a>从整体到局部的解析</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>对节点的操作</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>查找节点</a>
+												</dd>
+												<dd>
+													<a>修改节点</a>
+												</dd>
+												<dd>
+													<a>添加节点</a>
+												</dd>
+												<dd>
+													<a>删除节点</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="main-body">
+				<div class="doc">
+					<div class="doc-title">
+						<div class="doc-title-article">json数据的获取</div>
+						<div class="doc-title-author">
+							<div>作者：柳景兴</div>
+							<div>时间：2019年2月1日15点10分</div>
+							<div>关键词：json，获取，多种业务环境下</div>
+						</div>
+					</div>
+					<hr />
+					<div class="doc-content">
+						<p>
+							实际编程中，json数据很多时候并不是我们提前给定的，而是获取得来的。
+							要么是知名公司所提供的接口，要么是用户的输入，要么是特定的字符串中提取……
+							这里就介绍几种常用的方法。
+						</p>
+						<div class="doc-content-sub-title">直接从字符串中提取</div>
+						<div class="doc-content-quote">
+							<pre class="layui-code" lay-title="超长超烦字符串">var source = "{'info':{'school':[{'code':'1000','name':'湖北大学'},{'code':'1100','name':'纺织大学'}],'specialty':[{'code':'1010','name':'计算机','school':'1000'},{'code':'1110','name':'纺织学','school':'1100'},{'code':'1020','name':'汉语言文学','school':'1000'},{'code':'1120','name':'服装设计学','school':'1100'}],'classes':[{'code':'1011','name':'计算机1班','specialty':'1010'},{'code':'1111','name':'纺织学1班','specialty':'1110'},{'code':'1021','name':'汉语言文学1班','specialty':'1020'},{'code':'1121','name':'服装设计学1班','specialty':'1120'}]}}"</pre>
+							<p>
+								看到这些乱七八糟的就不想看了对吗？
+								放心吧，现在有很多软件可以将字符串序列化成json格式，然后变得让人看了非常舒服。
+								看归看，要拿数据还是得使用键值对的形式。
+							</p>
+							<p>如果是网页编程的话，最核心的部分就是这个函数：</p>
+							<pre class="layui-code" lay-title="JavaScript中将字符串序列化为json数据的函数">var target = eval('(' + source +')')</pre>
+							<p>
+								具体应用到JavaScript就是这样：
+							</p>
+							<pre class="layui-code" lay-title="调出字符串中第一所学校名称和代码的函数">
+function getJsonExample_1() {
+    var source = "{'info':{'school':[{'code':'1000','name':'湖北大学'},{'code':'1100','name':'纺织大学'}],'specialty':[{'code':'1010','name':'计算机','school':'1000'},{'code':'1110','name':'纺织学','school':'1100'},{'code':'1020','name':'汉语言文学','school':'1000'},{'code':'1120','name':'服装设计学','school':'1100'}],'classes':[{'code':'1011','name':'计算机1班','specialty':'1010'},{'code':'1111','name':'纺织学1班','specialty':'1110'},{'code':'1021','name':'汉语言文学1班','specialty':'1020'},{'code':'1121','name':'服装设计学1班','specialty':'1120'}]}}";
+    var target = eval('(' + source + ')');
+    alert(target.info.school[0].name + ':' + target.info.school[0].code);
+}</pre>
+							<p>就OK了。试一下吧！</p>
+							<button onclick="getJsonExample_1()" class="example-button">点我查看第一所大学信息</button>
+						</div>
+						<p>
+							实际上浏览器还有一些内置的函数。
+							其中JSON.parse(source)用于将字符串转换为json格式，
+							JSON.stringify(source)用于将json数据转换为字符串格式。
+							但是IE8及以下的浏览器不支持，而且对给定的json数据格式非常严格。
+							比如school属性没有加引号就会所有浏览器报错，而eval并不会。
+							但是eval也不是万能的，他也会执行json数据中的表达式，然后产生一些意想不到的效果。
+							这方面暂时没有找到对应的例子，所以也没法举例，等待以后更新。
+						</p>
+						<div class="doc-content-sub-title">使用jQuery的转换函数</div>
+						<p>
+							jQuery虽然说是新东西，实际上还是JavaScript的封装，本质上和JavaScript是一样的。
+							jQuery里面也有将字符串转换成json数据的函数：
+						</p>
+						<div class="doc-content-quote">
+							<pre class="layui-code" lay-title="jQuery中将字符串转换成json数据的函数">$.parseJSON(source); 或者 jQuery.parseJSON(source);</pre>
+							<p>
+								函数也就可以改写为：
+							</p>
+							<pre class="layui-code" lay-title="函数更替为使用jQuery中将字符串转换成json数据的方法">
+function getJsonExample_2() {
+    var source = '{"info":{"school":[{"code":"1000","name":"湖北大学"},{"code":"1100","name":"纺织大学"}],"specialty":[{"code":"1010","name":"计算机","school":"1000"},{"code":"1110","name":"纺织学","school":"1100"},{"code":"1020","name":"汉语言文学","school":"1000"},{"code":"1120","name":"服装设计学","school":"1100"}],"classes":[{"code":"1011","name":"计算机1班","specialty":"1010"},{"code":"1111","name":"纺织学1班","specialty":"1110"},{"code":"1021","name":"汉语言文学1班","specialty":"1020"},{"code":"1121","name":"服装设计学1班","specialty":"1120"}]}}';
+    var target = $.parseJSON(source);
+    alert(target.info.school[1].name + ':' + target.info.school[1].code);
+}</pre>
+							<button class="example-button" onclick="getJsonExample_2()">点我查看第二所大学信息</button>
+						</div>
+						<p>
+							但是这里需要注意的是，jQuery对字符串的要求是：所有属性使用双引号包裹起来而非单引号。这一点和eval略有不同。
+						</p>
+						<div class="doc-content-sub-title">使用jQuery的异步请求</div>
+						<p>
+							这个可以说是jQuery的一大难点了。
+							在网页编程中，当我们需要从数据库中获取信息的时候，
+							我们会选择使用jQuery的Ajax请求，向后台发送数据，后台再访问数据库，成功后返回一串json数据，传回并显示在页面。
+						</p>
+						<p>
+							请求分为同步和异步请求。
+							同步请求会在上一个请求完成之后进行下一个请求，编程的时候就顺着逻辑往下写就行了。
+							但这样缺点也非常明显：如果请求失败，浏览器将会一直等待到请求完成，期间无法进行任何操作，就像浏览器卡死崩溃一样。
+							这样将会大大降低用户体验。所以一般我们并不会用到同步。
+						</p>
+						<p>
+							那么直接来看异步请求的格式：
+						</p>
+						<div class="doc-content-quote">
+							<p>简洁的请求只需要明确url、async和success就行了。最简单的可以什么都不要。</p>
+							<pre class="layui-code" lay-title="jQuery异步请求的格式">
+$.ajax({  
+    url: "",
+    async: false,
+    success: function(data){
+    },
+    error: function(){
+    }
+});</pre>
+							<p>
+								其中url是向后台请求的方法名称。
+								在.Net环境中的MVC框架则是使用ControllerName/functionName?params作为url；
+								使用Java的Servlet则是使用projectName/ServletName/functionName?params作为url。
+								params表示参数的意思，是以parameterName=parameterValue的形式，多个参数中间使用‘&’符号连接。
+							</p>
+							<p>
+								值得注意的是，Java的Servlet在使用url的时候并不需要将函数参数和传递参数一一对应。
+								因为Servlet中可以使用request.getParameters(keyName)来获取问号后面的值。
+								这些将在后续讲到具体的Java和.Net的网络编程项目的时候详细展开，此处不一一赘述。
+							</p>
+							<p>
+								async则是设置请求是同步还是异步。默认值为“true”，即默认同步，false为异步。
+								而success是请求成功之后的回调函数，让浏览器在请求成功之后做些什么结束请求。什么都不做也是可以的。
+								为了提高用户体验，error也是可以有的。
+								当请求失败的时候可以告诉用户当前请求失败，用户得到反馈可以进行下一步的操作。
+								如果什么都没有会让用户不知所措，体验感下降。
+							</p>
+							<p>
+								这是更详细一点的参数设置：<a href="http://www.w3school.com.cn/jquery/ajax_ajax.asp">点我查看w3c在线文档</a>
+							</p>
+							<p>
+								下面这个例子将字符串source转换成json格式之后保存成文件，
+								然后从本页使用Ajax异步请求获取这个json文件中的内容。
+								源码如下：
+							</p>
+							<pre class="layui-code" lay-title="Ajax请求json文件">
+function getJsonExample_3() {
+    $.ajax({
+        type:"get",
+        url:"../../js/custom/examples/getJson.json",
+        async:false,
+        success: function(data) {
+            alert(data.info.school[0].name + ":" + data.info.school[0].code);
+        },
+        error: function() {
+            alert("请求失败！");
+        }
+    });
+}</pre>
+							<button onclick="getJsonExample_3()" class="example-button">点我查看第一所学校的信息</button>
+						</div>
+						<p>
+							异步请求最经典的例子就是下拉框的级联了。
+							切换下拉框的选项之后，另一个下拉框也做出相应的改变。
+							在国家-省份-城市-区县四级联动、学校-专业-学生三级联动等多个应用情景都有体现。
+							这将会在后面讲到.Net的web项目的时候会具体展开，此处不一一赘述。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="footer">
+			<div class="pay">如果你觉得非常不错，可以选择点击右上角进行打赏。</div>
+		</div>
+
+	</body>
+
+</html>

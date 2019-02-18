@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>柳景兴的个人博客</title>
+		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="stylesheet" href="css/document.css" />
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/general.css" />
+		<link rel="stylesheet" href="js/layui/css/layui.css" />
+		<script type="text/javascript" src="js/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+		</script>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/custom/layout.js"></script>
+	</head>
+
+	<body>
+		<div class="bg alert-hide">
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closePay">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="img/pay/柳景兴的支付宝.jpg" />
+						<figcaption>支付宝收款码</figcaption>
+					</figure>
+					<figure>
+						<img src="img/pay/柳景兴的微信收款.png" />
+						<figcaption>微信收款码</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closeCall">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="img/pay/柳景兴的QQ账号.jpg" />
+						<figcaption>QQ</figcaption>
+					</figure>
+					<figure>
+						<img src="img/pay/柳景兴的微信账号.png" />
+						<figcaption>微信</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="left-title">
+				<h1>柳景兴的个人博客</h1>
+			</div>
+			<div class="right-title">
+				<div class="title-items"><a href="index.html">首页</a></div>
+				<div class="title-items">联系方式</div>
+				<div class="title-items">打赏</div>
+			</div>
+		</div>
+		<div class="container">
+			<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo">
+				<li class="layui-nav-item">
+					<a>目录</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>JavaScript<img src="img/icon/javascript.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="notes/javascript/useJson.html">Json数据的使用</a>
+									</dd>
+									<dd>
+										<a href="notes/javascript/getJson.html">Json数据的获取</a>
+									</dd>
+									<dd>
+										<a>Json数据的发送</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C#<img src="img/icon/csharp.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="notes/csharp/dotNetMVC.html">.Net环境下的MVC框架</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>学生成绩管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a href="notes/csharp/operateDatabase.html">对数据库的操作</a>
+												</dd>
+												<dd>
+													<li class="layui-nav-item">
+														<a>业务操作中的重点</a>
+														<dl class="layui-nav-child">
+															<dd>
+																<a href="notes/csharp/signInWithValidation.html">登录和验证</a>
+															</dd>
+															<dd>
+																<a>上传文件</a>
+															</dd>
+															<dd>
+																<a>学生打分</a>
+															</dd>
+															<dd>
+																<a>国家-省份-城市-区县的四级联动</a>
+															</dd>
+														</dl>
+													</li>
+												</dd>
+												<dd>
+													<a>分页插件的使用</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<a>学生学分管理系统</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>Java<img src="img/icon/java.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a>网易云音乐的开发者通道</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>纯Servlet的图书管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>环境搭建说明</a>
+												</dd>
+												<dd>
+													<a>前后台交互方式介绍</a>
+												</dd>
+												<dd>
+													<a>不使用插件的分页</a>
+												</dd>
+												<dd>
+													<a>web.xml的配置</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C<img src="img/icon/c.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<li class="layui-nav-item">
+											<a>面向对象思想的借鉴</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>面向对象思想简介</a>
+												</dd>
+												<dd>
+													<a>从整体到局部的解析</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>对节点的操作</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>查找节点</a>
+												</dd>
+												<dd>
+													<a>修改节点</a>
+												</dd>
+												<dd>
+													<a>添加节点</a>
+												</dd>
+												<dd>
+													<a>删除节点</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="main-body">
+				<div class="doc">
+					<div class="doc-title">
+						<div class="doc-title-article">写在前面的话</div>
+						<div class="doc-title-author">
+							<div>作者：柳景兴</div>
+							<div>时间：2019年2月12日16点31分</div>
+							<div>关键词：前言，送给读者的话</div>
+						</div>
+					</div>
+					<hr />
+					<div class="doc-content">
+						<p>
+							大家好，我是柳景兴，写这篇文章的时候我还是一名大三学生。
+						</p>
+						<p>
+							我始终认为我是起步非常晚非常慢的，从大一才开始真正接触计算机，从大二开始真正开始学习编程，从大三开始接触网页编程基础。 可以说，我的计算机人生从2018年下半年才算是真正的起步了。 比起那些还是高中生就可以一个人写游戏的大佬，我真的是只在山脚下徘徊的蝼蚁一般。
+						</p>
+						<p>
+							但也没必要失望。只要还年轻，稍微冲一把，找个小工作混饭吃倒还过得去，就是别奢望生活会很好就是了。 当然啦，像我这样学到了一点点微不足道的知识就开始膨胀的人来说，还是会想象未来挣大钱买大房子。 不过呢，梦想归梦想，想想就好。当下才是最重要的不是吗？要想混饭吃还不是得现在开始学嘛。
+						</p>
+						<p>
+							这个教程是以图文的形式展现，力求浅显易懂，主要面向刚入坑的萌新。 老油子们也可以过来看看提点意见。言语可以激烈，但是禁止攻击。 最终的目的自然是完善这个教程。 我作为刚刚从坑中艰难爬出来的半吊子来说，还是希望各位萌新在入坑时能够更加的顺利。
+						</p>
+						<p>
+							这个网站纯粹是使用静态页面。 其中使用了Daniel Eden的animate大全、layui的垂直导航栏、layui的代码修饰器。 制作不易，还请各位多加支持。 后面如果继续学习一些新东西的话可能还会往里面加一些后台之类的。
+						</p>
+						<p>
+							如果是使用手机食用的话，可以从上方的导航栏选择合适自己的教程； 如果是使用平板或者电脑食用的话，可以从左侧的导航栏选择合适自己的教程。
+						</p>
+						<p>
+							另外说明一下，这里的所有实例都不是完整的项目，都只是为了说明而举例。如果需要查看完整项目，请在下方寻找你想要的项目：
+							<ul>
+								<ol><a href="https://www.github.com/sakebow/20181006">.Net环境下的学生成绩管理系统</a></ol>
+							</ul>
+						</p>
+						<p>
+							就是这些了，希望大家食用愉快。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="footer">
+			<div class="pay">如果你觉得非常不错，可以选择点击右上角进行打赏。</div>
+		</div>
+	</body>
+
+</html>

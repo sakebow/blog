@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录和验证</title>
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<link rel="stylesheet" href="../../css/document.css" />
+		<link rel="stylesheet" href="../../css/fonts.css" />
+		<link rel="stylesheet" href="../../css/general.css" />
+		<link rel="stylesheet" href="../../js/layui/css/layui.css" />
+		<script type="text/javascript" src="../../js/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+			layui.use('code', function() {
+				layui.code();
+			});
+		</script>
+		<script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../../js/custom/layout.js"></script>
+	</head>
+
+	<body>
+		<div class="bg alert-hide">
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closePay">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的支付宝.jpg" />
+						<figcaption>支付宝收款码</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信收款.png" />
+						<figcaption>微信收款码</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closeCall">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的QQ账号.jpg" />
+						<figcaption>QQ</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信账号.png" />
+						<figcaption>微信</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert-img alert-hide">
+				<div class="alert-header">
+					<div id="closeImg">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure style="height: 34em;">
+						<img src="" id="showImg" />
+						<figcaption></figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="left-title">
+				<h1>柳景兴的个人博客</h1>
+			</div>
+			<div class="right-title">
+				<div class="title-items">
+					<a href="../../index.html">首页</a>
+				</div>
+				<div class="title-items">联系方式</div>
+				<div class="title-items">打赏</div>
+			</div>
+		</div>
+		<div class="container">
+			<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo">
+				<li class="layui-nav-item">
+					<a>目录</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>JavaScript<img src="../../img/icon/javascript.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="useJson.html">Json数据的使用</a>
+									</dd>
+									<dd>
+										<a href="getJson.html">Json数据的获取</a>
+									</dd>
+									<dd>
+										<a>Json数据的发送</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C#<img src="../../img/icon/csharp.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="dotNetMVC.html">.Net环境下的MVC框架</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>学生成绩管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a href="operateDatabase.html">对数据库的操作</a>
+												</dd>
+												<dd>
+													<li class="layui-nav-item">
+														<a>业务操作中的重点</a>
+														<dl class="layui-nav-child">
+															<dd>
+																<a href="signInWithValidation.html">登录和验证</a>
+															</dd>
+															<dd>
+																<a>上传文件</a>
+															</dd>
+															<dd>
+																<a>学生打分</a>
+															</dd>
+															<dd>
+																<a>国家-省份-城市-区县的四级联动</a>
+															</dd>
+														</dl>
+													</li>
+												</dd>
+												<dd>
+													<a>分页插件的使用</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<a>学生学分管理系统</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>Java<img src="../../img/icon/java.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a>网易云音乐的开发者通道</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>纯Servlet的图书管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>环境搭建说明</a>
+												</dd>
+												<dd>
+													<a>前后台交互方式介绍</a>
+												</dd>
+												<dd>
+													<a>不使用插件的分页</a>
+												</dd>
+												<dd>
+													<a>web.xml的配置</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C<img src="../../img/icon/c.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<li class="layui-nav-item">
+											<a>面向对象思想的借鉴</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>面向对象思想简介</a>
+												</dd>
+												<dd>
+													<a>从整体到局部的解析</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>对节点的操作</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>查找节点</a>
+												</dd>
+												<dd>
+													<a>修改节点</a>
+												</dd>
+												<dd>
+													<a>添加节点</a>
+												</dd>
+												<dd>
+													<a>删除节点</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="main-body">
+				<div class="doc">
+					<div class="doc-title">
+						<div class="doc-title-article">登录和验证</div>
+						<div class="doc-title-author">
+							<div>作者：柳景兴</div>
+							<div>日期：2019年2月17日18点14分</div>
+							<div>关键词：.Net 登录验证 实例图文示演示</div>
+						</div>
+					</div>
+					<hr />
+					<div class="doc-content">
+						<p>接下来就是非常真实的实例了。在这里将默认你已经HTML入门并掌握了一定的CSS基础，并直接从建立好了空白的MVC项目开始。如果你是从前面跳过来的，但是不知道怎么建立MVC项目，还请跳回去看看：
+							<a href="dotNetMVC.html">.Net环境下的MVC框架</a>。</p>
+						<div class="doc-content-quote">
+							<div class="doc-content-sub-title">写一个普通的登陆页面</div>
+							<pre class="layui-code" lay-title="登录页面" lay-encode="false">
+@{
+    ViewBag.Title = "Index";
+}
+<table style="margin: 10px auto">
+    <tr>
+        <td><label>账号：</label></td>
+        <td><input name="id" class="form-control" type="text" /></td>
+    </tr>
+    <tr>
+        <td><label>密码：</label></td>
+        <td><input name="pwd" class="form-control" type="password" /></td>
+    </tr>
+</table></pre>
+							<p>
+								其中的form-control其实时bootstrap前端模板的一种类型，输入框的效果就变成了这样：
+							</p>
+							<div class="doc-images-frame">
+								<figure>
+									<img src="../../img/notes/csharp/signIn1.png" />
+									<figcaption>注意输入框的变化</figcaption>
+								</figure>
+							</div>
+							<p>还算是稍微漂亮了一点点吧？至少比原生的输入框还是要优秀一点的。接下来添加一个submit按钮作为登录按钮。</p>
+							<pre class="layui-code" lay-title="添加登录按钮" lay-encode="false">
+@{
+    ViewBag.Title = "Index";
+}
+<table style="margin: 10px auto">
+    <tr>
+        <td><label>账号：</label></td>
+        <td><input name="id" class="form-control" type="text" required/></td>
+    </tr>
+    <tr>
+        <td><label>密码：</label></td>
+        <td><input name="pwd" class="form-control" type="password" required/></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="submit" value="登录" class="form-control"/></td>
+    </tr>
+</table></pre>
+							<div class="doc-images-frame">
+								<figure>
+									<img src="../../img/notes/csharp/signIn2.png" />
+									<figcaption>添加登录按钮</figcaption>
+								</figure>
+							</div>
+							<p>
+								好像有点丑……不管啦！反正到此页面布局就算完成了！接下来开始做验证的工作。当然，你可以使用JavaScript或者jQuery判断，这里就直接使用CSS的新特性“required”，表示想要提交必须先把这个填些东西。
+							</p>
+							<div class="doc-content-sub-title">前后台的交互</div>
+							<p>
+								接下来就是前后台交互的问题了。我们都知道，表单提交就需要form标签。但是这里VS依然给你封装好了一套接口，把添加form改成了使用@using(){}，大括号中填form中的元素。实例如下：
+							</p>
+							<pre class="layui-code" lay-title="form表单的另一种表现形式" lay-encode="false">
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <table style="margin: 10px auto">
+        <tr>
+            <td><label>账号：</label></td>
+            <td><input name="id" class="form-control" type="text" required /></td>
+        </tr>
+        <tr>
+            <td><label>密码：</label></td>
+            <td><input name="pwd" class="form-control" type="password" required /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="登录" class="form-control" /></td>
+        </tr></table>
+}</pre>
+							<p>于是呢，required属性就开始产生作用：</p>
+							<div class="doc-images-frame">
+								<figure>
+									<img src="../../img/notes/csharp/signIn3.png" />
+									<figcaption>在chrome浏览器下的表现</figcaption>
+								</figure>
+								<figure>
+									<img src="../../img/notes/csharp/signIn4.png" />
+									<figcaption>在Firefox浏览器下的表现</figcaption>
+								</figure>
+							</div>
+							<p>
+								那么接下来的问题就是前后台的交互了。 如果你了解Servlet，你会想到request.getParameter("name")，其中的name就是控件的name属性。 那么.Net下呢？我们可以直接将name放入方法的参数中。我们通过页面的跳转来检测传递的数据是否正确。
+							</p>
+							<p>
+								我们在Views/Home文件夹下新建一个Success页面，表示登录成功；新建一个Error页面，表示登录失败。 当输入的用户名是admin，密码是123的时候跳转到Success页面，否则跳转到Error页面。
+							</p>
+							<pre class="layui-code" lay-title="后台传入数据测试">
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(string id, string pwd)
+        {
+            if ("admin".Equals(id) && "123".Equals(pwd))
+            {
+                return RedirectToAction("success", "Home");
+            }
+            else
+            {
+                return RedirectToAction("fail", "Home");
+            }
+        }
+        public ActionResult success()
+        {
+            return View();
+        }
+        public ActionResult fail()
+        {
+            return View();
+        }
+    }
+}</pre>
+							<p>
+								由于新建了两个页面，我们需要在控制器中新增对应名称的方法，这样才可以显示页面。
+							</p>
+							<div class="doc-images-frame">
+								<figure>
+									<img src="../../img/notes/csharp/signIn5.png" />
+									<figcaption>文件结构</figcaption>
+								</figure>
+							</div>
+							<div class="doc-images-frame">
+								<figure>
+									<img src="../../img/notes/csharp/signIn6.png" />
+									<figcaption>当账号为admin，密码为123， 跳转到Success</figcaption>
+								</figure>
+								<figure>
+									<img src="../../img/notes/csharp/signIn7.png" />
+									<figcaption>其余的输入跳转到Error</figcaption>
+								</figure>
+							</div>
+							<p>
+								说明一下为什么页面需要大写：因为C#中方法名是应该首字母大写的，这个和Java有所不同。所以和方法名对应的页面名称也应当大写。
+							</p>
+							<div class="doc-content-sub-title">记录登录信息</div>
+							<p>
+								在登录之后，我们往往会看到页面上有自己的信息。这就是通过一个全局的变量将登录成功的账号存储下来。 这个全局变量就是Session。这个Session可以看作字典类型，以Session["key"]来访问，每个键对应单个字符串。 在哪里定义呢？我们在项目中会发现一个名为Global.asax的文件，一开始是这样的：
+							</p>
+							<pre class="layui-code" lay-title="Global.asax初始内容">
+public class MvcApplication : System.Web.HttpApplication
+{
+    protected void Application_Start()
+    {
+        AreaRegistration.RegisterAllAreas();
+        RouteConfig.RegisterRoutes(RouteTable.Routes);
+    }
+}</pre>
+							<p>接着我们往其中添加内容：</p>
+							<pre class="layui-code" lay-title="Global.asax定义Session">
+public class MvcApplication : System.Web.HttpApplication
+{
+    protected void Application_Start()
+    {
+        AreaRegistration.RegisterAllAreas();
+        RouteConfig.RegisterRoutes(RouteTable.Routes);
+    }
+    protected void Session_Start()
+    {
+        Session["id"] = "none";
+    }
+    protected void Session_End()
+    {
+        Session["id"] = "none";
+    }
+}</pre>
+							<p>
+								Session_Start是一旦浏览器打开了这个网站中的任何网页的时候，就会将Session中键为“id”的字符串赋值为“none”； Session_End是一旦浏览器关闭这个网站中所有网页的时候之后，就会将Session中键为“id”的字符串赋值为“none”。 有时候我们在学校的系统中登录多个学生账号的时候总会出现前一个同学的信息被后一个同学信息顶掉的情况就是这个全局变量Session。我们将Success页面中写上展示Session的语句：
+							</p>
+							<pre class="layui-code" lay-title="登录成功页面展示Session" lay-encode="false">
+@{
+    ViewBag.Title = "success";
+}
+<h2>success</h2>
+<h3>@Session["id"]</h3></pre>
+							<p>输入正确的账号和密码之后，Success页面就变成了这样：</p>
+							<div class="doc-images-frame">
+								<figure>
+									<img src="../../img/notes/csharp/signIn8.png" />
+									<figcaption>展示Session</figcaption>
+								</figure>
+							</div>
+							<p>当然我们也可以在Controller中修改Session的值。</p>
+							<pre class="layui-code" lay-title="登录成功就修改Session的值">
+[HttpPost]
+public ActionResult Index(string id, string pwd)
+{
+    if ("admin".Equals(id) && "123".Equals(pwd))
+    {
+        Session["id"] = id; // 就只添加了这一句
+        return RedirectToAction("Success", "Home");
+    }
+    else
+    {
+        return RedirectToAction("Error", "Home");
+    }
+}</pre>
+							<p>于是Success页面有了一点小小的变化：</p>
+							<div class="doc-images-frame">
+								<figure>
+									<img src="../../img/notes/csharp/signIn9.png" />
+									<figcaption>Session的值产生了变化</figcaption>
+								</figure>
+							</div>
+						</div>
+						<p>以上就是登录和验证的全部内容。唯一需要注意的是，Session加上对应的键可以作为字符串使用，却在某些特殊情况下无法使用。这在后面的例子中会提到，此处不一一赘述。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="footer">
+			<div class="pay">如果你觉得非常不错，可以选择点击右上角进行打赏。</div>
+		</div>
+	</body>
+
+</html>

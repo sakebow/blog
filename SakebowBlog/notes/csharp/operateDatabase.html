@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>对数据库的操作</title>
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<link rel="stylesheet" href="../../css/document.css" />
+		<link rel="stylesheet" href="../../css/fonts.css" />
+		<link rel="stylesheet" href="../../css/general.css" />
+		<link rel="stylesheet" href="../../js/layui/css/layui.css" />
+		<script type="text/javascript" src="../../js/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+			layui.use('code', function() {
+				layui.code();
+			});
+		</script>
+		<script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../../js/custom/layout.js"></script>
+	</head>
+
+	<body>
+		<div class="bg alert-hide">
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closePay">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的支付宝.jpg" />
+						<figcaption>支付宝收款码</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信收款.png" />
+						<figcaption>微信收款码</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closeCall">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的QQ账号.jpg" />
+						<figcaption>QQ</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信账号.png" />
+						<figcaption>微信</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert-img alert-hide">
+				<div class="alert-header">
+					<div id="closeImg">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure style="height: 34em;">
+						<img src="" id="showImg" />
+						<figcaption></figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="left-title">
+				<h1>柳景兴的个人博客</h1>
+			</div>
+			<div class="right-title">
+				<div class="title-items">
+					<a href="../../index.html">首页</a>
+				</div>
+				<div class="title-items">联系方式</div>
+				<div class="title-items">打赏</div>
+			</div>
+		</div>
+		<div class="container">
+			<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo">
+				<li class="layui-nav-item">
+					<a>目录</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>JavaScript<img src="../../img/icon/javascript.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="useJson.html">Json数据的使用</a>
+									</dd>
+									<dd>
+										<a href="getJson.html">Json数据的获取</a>
+									</dd>
+									<dd>
+										<a>Json数据的发送</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C#<img src="../../img/icon/csharp.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="dotNetMVC.html">.Net环境下的MVC框架</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>学生成绩管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a href="operateDatabase.html">对数据库的操作</a>
+												</dd>
+												<dd>
+													<li class="layui-nav-item">
+														<a>业务操作中的重点</a>
+														<dl class="layui-nav-child">
+															<dd>
+																<a href="signInWithValidation.html">登录和验证</a>
+															</dd>
+															<dd>
+																<a>上传文件</a>
+															</dd>
+															<dd>
+																<a>学生打分</a>
+															</dd>
+															<dd>
+																<a>国家-省份-城市-区县的四级联动</a>
+															</dd>
+														</dl>
+													</li>
+												</dd>
+												<dd>
+													<a>分页插件的使用</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<a>学生学分管理系统</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>Java<img src="../../img/icon/java.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a>网易云音乐的开发者通道</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>纯Servlet的图书管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>环境搭建说明</a>
+												</dd>
+												<dd>
+													<a>前后台交互方式介绍</a>
+												</dd>
+												<dd>
+													<a>不使用插件的分页</a>
+												</dd>
+												<dd>
+													<a>web.xml的配置</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C<img src="../../img/icon/c.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<li class="layui-nav-item">
+											<a>面向对象思想的借鉴</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>面向对象思想简介</a>
+												</dd>
+												<dd>
+													<a>从整体到局部的解析</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>对节点的操作</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>查找节点</a>
+												</dd>
+												<dd>
+													<a>修改节点</a>
+												</dd>
+												<dd>
+													<a>添加节点</a>
+												</dd>
+												<dd>
+													<a>删除节点</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="main-body">
+				<div class="doc">
+					<div class="doc-title">
+						<div class="doc-title-article">对数据库的操作</div>
+						<div class="doc-title-author">
+							<div>作者：柳景兴</div>
+							<div>日期：2019年2月16日22点38分</div>
+							<div>关键词：.Net MVC 数据库</div>
+						</div>
+					</div>
+					<hr />
+					<div class="doc-content">
+						<p>
+							因为这篇文章只讲一些有关操作数据库的方法，所以并不会拿实例进行说明。 如果需要通过实例进行学习，还请移步后面的实战环节。
+						</p>
+						<div class="doc-content-sub-title">最重要的是将所有业务转换成数据据库操作的能力</div>
+						<p>
+							无论是什么业务，只要数据库表里面的字段全都明确了，所有的业务操作就完全可以转换成对数据库的操作。
+						</p>
+						<p>
+							比如写博客。 用户编辑了一篇博客，上传的时候就是对博客表进行增操作； 管理员发现这篇博客有不良因素，删除的时候可以是对表进行删操作，也可以是对表进行改操作； 其他用户想要查找一篇博客，就是对表进行查操作。这样一想是不是就变得很简单了呢？
+						</p>
+						<p>
+							那么具体的代码如何实现？
+						</p>
+						<div class="doc-content-sub-title">查操作</div>
+						<p>
+							如果你有一点点Java基础但是又未接触框架，你将会自行编写接口实现数据库的增删改查。 但是这些VS全都给你封装好了，就是LINQ语句。极其类似SQL语句，但是有略微有一些不一样。
+						</p>
+						<div class="doc-content-quote">
+							<div class="doc-content-sub-title">SQL的查找</div>
+							<p>在各种数据库软件中，都是写上：</p>
+							<pre class="layui-code" lay-title="SQL的查语句">SELECT * FROM tb_name WHERE col_name = data;</pre>
+							<p>然后点击执行，就会有个框框以数据表格的形式显示查询的结果。</p>
+							<div class="doc-content-sub-title">LINQ的查找</div>
+							<p>而VS中LINQ语句是这么写的：</p>
+							<pre class="layui-code" lay-title="LINQ格式">from s in tb_name where col_name = data select s</pre>
+							<p>
+								其中的s是随意定义的，可以是a到z的任意字母，也可以是单词或者小写开头的驼峰形式词组。 但是这个没有执行结果展示，你需要使用变量保存结果。 好嘛，定义一个变量嘛，tb_data。 问题来了，数据类型？ 这你不需要担心，C#允许使用var作为数据类型，但是必须初始化。 这就好说了嘛！
+							</p>
+							<pre class="layui-code" lay-title="LINQ格式">var tb_data = (from s in tb_name where col_name = data select s);</pre>
+						</div>
+						<p>
+							实际上tb_data的数据类型是IQueryable&lt;tb_name&gt;，这个类型是不是完全没见过？ 这将在之后的例子中详细说明。
+						</p>
+						<div class="doc-content-sub-title">改操作</div>
+						<p>
+							改操作就是先进行查操作，在针对单个数据进行修改。 刚刚我们拿到了一些数据并保存进了 tb_data中，我们接下来要针对某个或者多个字段进行修改，如何实现呢？
+						</p>
+						<p>
+							在这里就不得不强调一下面向对象的思想。当然你会觉得C#不就是面向对象的嘛，这有啥强调的？ 我们不如将一整行数据想象成一个对象，不同的字段对应不同的属性。 修改操作就是专门针对这个对象的属性。 但是缺点也非常明显：一次只能修改一行数据。 为了弥补这个缺点，修改操作一般是明确修改对象的时候调用操作。 比如个人信息修改、修改申请、修改订单之类的。
+						</p>
+						<div class="doc-content-quote">
+							<div class="doc-content-sub-title">选中一行数据，再修改指定数据，最后保存提交</div>
+							<pre class="layui-code" lay-title="使用LINQ的修改操作">
+var tb_row = (from s in tb_name select s).SingleOrDefault(s => s.col_name = data);
+tb_row.other_col_name = new_data;</pre>
+							<p>SingleOrDefault是在集合中选出唯一符合条件的对象。后面的“=>”符号就是lambda表达式。由于提交修改的方法有点特殊，具体方法将在后续的例子中详细展开，此处不一一赘述。</p>
+						</div>
+						<p>
+							如果需要大批量修改，先找出所有需要修改的多行数据，进行遍历。 虽然逻辑上并没有什么难度，但是执行起来效率较低。如果数据量超过一定数量用户界面就会一直卡住，降低体验。 当然你也可以借鉴分页执行效率的思想， 先使用lambda表达式中的Skip函数对数据进行分页分页，再使用Take函数获取每页的数据并修改， 相对来说会节省非常多的时间。这种方法在WinForm和WebForm中运用较多。 VS当然也预留了很多批量修改的接口，还有灵活应用提高执行效率的很多种方法，这里就不一一阐释了。
+						</p>
+						<div class="doc-content-sub-title">增操作</div>
+						<p>
+							还是一样的，我们将一行数据视为一个对象，每次添加的时候添加一行数据。 添加多行数据就使用循环依次添加。
+						</p>
+						<div class="doc-content-quote">
+							<div class="doc-content-sub-title">先对需要添加的数据用一个类的各种属性表示</div>
+							<pre class="layui-code" lay-title="创建对应数据库表的类">
+public class tb_name_class {
+    public col_name;
+    public other_col_name;
+}</pre>
+							<p>
+								当然你也可以将访问属性设为private，然后添加getter和setter构造器。 当然，构造器是编译器自动生成的，并不需要程序员多加思考。
+							</p>
+							<div class="doc-content-sub-title">然后将这个类实例化，并作为对象添加进表中</div>
+							<pre class="layui-code" lay-title="LINQ的增操作">
+tb_name.Add(new tb_name_class{
+    col_name = data;
+    other_col_name = other_data;
+})</pre>
+							<p>同样的，这里需要提交修改，否则不会产生任何效果。方法和改操作是完全一样的。在后面的实例中会详细展开，此处不做赘述。</p>
+						</div>
+						<p>
+							同样的，执行效率并不是非常高，对于大批量的数据依旧表现并不出色。
+						</p>
+						<div class="doc-content-sub-title">删操作</div>
+						<p>
+							删操作和增操作是对立的，方法实现上也是相近的。不同之处就在于增操作将会新建对象放入表中，而删操作是从表中选出现有对象，移出表中。
+						</p>
+						<div class="doc-content-quote">
+							<div class="doc-content-sub-title">首先筛选合适的对象</div>
+							<pre class="layui-code" lay-title="和改操作一样的查询">var tb_data = (from s in tb_name select s).SingleOrDefault(s => s.col_name = data);</pre>
+							<p>这里需要和改操作一样的提交修改的方法。在后面的实例中会详细展开，此处不做赘述。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="footer">
+			<div class="pay">如果你觉得非常不错，可以选择点击右上角进行打赏。</div>
+		</div>
+	</body>
+
+</html>

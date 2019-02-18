@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>json数据的使用</title>
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<link rel="stylesheet" href="../../css/document.css" />
+		<link rel="stylesheet" href="../../css/fonts.css" />
+		<link rel="stylesheet" href="../../css/general.css" />
+		<link rel="stylesheet" href="../../js/layui/css/layui.css" />
+		<script type="text/javascript" src="../../js/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+			layui.use('code', function() {
+				layui.code();
+			});
+		</script>
+		<script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../../js/custom/layout.js"></script>
+	</head>
+
+	<body>
+		<div class="bg alert-hide">
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closePay">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的支付宝.jpg" />
+						<figcaption>支付宝收款码</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信收款.png" />
+						<figcaption>微信收款码</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closeCall">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的QQ账号.jpg" />
+						<figcaption>QQ</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信账号.png" />
+						<figcaption>微信</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="left-title">
+				<h1>柳景兴的个人博客</h1>
+			</div>
+			<div class="right-title">
+				<div class="title-items"><a href="../../index.html">首页</a></div>
+				<div class="title-items">联系方式</div>
+				<div class="title-items">打赏</div>
+			</div>
+		</div>
+		<div class="container">
+			<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo">
+				<li class="layui-nav-item">
+					<a>目录</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>JavaScript<img src="../../img/icon/javascript.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="useJson.html">Json数据的使用</a>
+									</dd>
+									<dd>
+										<a href="getJson.html">Json数据的获取</a>
+									</dd>
+									<dd>
+										<a>Json数据的发送</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C#<img src="../../img/icon/csharp.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="../csharp/dotNetMVC.html">.Net环境下的MVC框架</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>学生成绩管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a href="../csharp/operateDatabase.html">对数据库的操作</a>
+												</dd>
+												<dd>
+													<li class="layui-nav-item">
+														<a>业务操作中的重点</a>
+														<dl class="layui-nav-child">
+															<dd>
+																<a href="../csharp/signInWithValidation.html">登录和验证</a>
+															</dd>
+															<dd>
+																<a>上传文件</a>
+															</dd>
+															<dd>
+																<a>学生打分</a>
+															</dd>
+															<dd>
+																<a>国家-省份-城市-区县的四级联动</a>
+															</dd>
+														</dl>
+													</li>
+												</dd>
+												<dd>
+													<a>分页插件的使用</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<a>学生学分管理系统</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>Java<img src="../../img/icon/java.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a>网易云音乐的开发者通道</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>纯Servlet的图书管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>环境搭建说明</a>
+												</dd>
+												<dd>
+													<a>前后台交互方式介绍</a>
+												</dd>
+												<dd>
+													<a>不使用插件的分页</a>
+												</dd>
+												<dd>
+													<a>web.xml的配置</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C<img src="../../img/icon/c.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<li class="layui-nav-item">
+											<a>面向对象思想的借鉴</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>面向对象思想简介</a>
+												</dd>
+												<dd>
+													<a>从整体到局部的解析</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>对节点的操作</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>查找节点</a>
+												</dd>
+												<dd>
+													<a>修改节点</a>
+												</dd>
+												<dd>
+													<a>添加节点</a>
+												</dd>
+												<dd>
+													<a>删除节点</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="main-body">
+				<div class="doc">
+					<div class="doc-title">
+						<div class="doc-title-article">json数据的使用</div>
+						<div class="doc-title-author">
+							<div>作者：柳景兴</div>
+							<div>时间：2019年2月13日00点25分</div>
+							<div>关键词：json，特点，使用方法</div>
+						</div>
+					</div>
+					<hr />
+					<div class="doc-content">
+						<p>json格式是JavaScript语法中的一个分支，用法灵活，尤其在网络编程上展现出强大的功能。但是不能识别注释。</p>
+						<div class="doc-content-sub-title">json数据的特点</div>
+						<p>
+							json数据以键值对的形式展现，可以存储极小规模的多种类型变量。 json数据格式最大的便利就是可以给定任意数目、任意类型的数据， 可以是任何一种基本类型，也可以是集合、数组、对象等等。 所以在网络编程的时候经常使用json数据格式传输很多信息。 在使用Python实现网络爬虫的时候，或者使用Java、C#等于语言去实现其他知名公司预留的接口时， 我们的目标往往都是获取json数据，里面会有很多我们想要的东西。
+						</p>
+						<div class="doc-content-sub-title">json数据的使用方法</div>
+						<p>
+							虽然现在已经有很多便利的创建并检查json数据格式的软件，但还是需要说明一些细节问题，便于调试。
+						</p>
+						<p>
+							首先是：只要是json数据，就必须需要一个大括号包裹起来；这一细节经常会有人忽略，还请多加注意。
+						</p>
+						<p>
+							其次，键值对的表现形式即为key:value的形式，一般把key叫做“属性”，不同的属性之间使用逗号隔开。 在这里给出一个简单的例子。
+						</p>
+						<div class="doc-content-quote">
+							<div class="doc-content-sub-title">自然语言和json数据之间的转化</div>
+							<p>
+								自然语言：
+							</p>
+							<p>
+								“大家好，我叫柳景兴，20岁，是一名正在湖北大学计算机与信息工程学院软件工程产业计划专业的大三学生。最近的困扰是买手办被爸妈反对了。”
+							</p>
+							<p>
+								json数据：
+							</p>
+							<pre class="layui-code" lay-title="自然语言json化">
+{
+    "人" : {
+        "学生" : [{
+            "姓名" : "柳景兴",
+            "年龄" : 20,
+            "学校" : "湖北大学",
+            "学院" : "计算机与信息工程学院",
+            "专业" : "软件工程产业计划",
+            "最近的困扰" : "买手办被爸妈反对"
+        }]
+    }
+}</pre>
+							<p>
+								说明一下，首先是不能掉的大括号。然后确定一个人的分类，将不同的职业确定为这个分类中的不同属性。 每个属性中存储的是一个数组，数组中有很多的个体，我们习惯上叫他“对象”。 对象中的各个属性就是上方的自然语言中提到的各种信息。
+							</p>
+							<p>
+								而当我们需要获取这些信息的时候，如果是网页上，就需要在script标签中写下：
+							</p>
+							<pre class="layui-code" lay-title="获取json数据中的属性">人.学生[0].姓名</pre>
+							<p>
+								这样就拿到了"柳景兴"这三个字。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="footer">
+			<div class="pay">如果你觉得非常不错，可以选择点击右上角进行打赏。</div>
+		</div>
+	</body>
+
+</html>

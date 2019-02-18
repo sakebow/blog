@@ -1,0 +1,378 @@
+/* 去掉留白 */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.bg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	-webkit-align-items: center;
+	z-index: 10;
+}
+.bg-in {
+	animation: fadeIn 0.5s;
+	-moz-animation: fadeIn 0.5s;
+	-webkit-animation: fadeIn 0.5s;
+	-o-animation: fadeIn 0.5s;
+}
+.bg-out {
+	animation: fadeOut 0.5s;
+	-moz-animation: fadeOut 0.5s;
+	-webkit-animation: fadeOut 0.5s;
+	-o-animation: fadeOut 0.5s;
+}
+.alert, .alert-img {
+	border-radius: 0.25em;
+	background-color: white;
+	z-index: 11;
+}
+.alert-in {
+	animation: fadeInUp 0.5s;
+	-moz-animation: fadeInUp 0.5s;
+	-webkit-animation: fadeInUp 0.5s;
+	-o-animation: fadeInUp 0.5s;
+}
+.alert-out {
+	animation: fadeOutUp 0.5s;
+	-moz-animation: fadeOutUp 0.5s;
+	-webkit-animation: fadeOutUp 0.5s;
+	-o-animation: fadeOutUp 0.5s;
+}
+
+.alert-header {
+	border-bottom: solid 0.1em rgba(0, 0, 0, 0.3);
+	text-align: right;
+}
+
+.alert-container, .alert-container-img {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+.alert-container figure, .alert-container-img figure {
+	text-align: center;
+}
+
+.alert-container img {
+	width: auto;
+}
+
+.alert-hide {
+	display: none;
+}
+
+
+/* 页眉 */
+
+.header {
+	width: 100%;
+	font-family: "汉仪黛玉体";
+	background-color: rgba(240, 240, 240, 1);
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	border-bottom: solid 0.1em black;
+}
+
+
+/* 左标题 */
+
+.header .left-title {
+	width: 30%;
+	min-width: 320px;
+}
+
+
+/* 右标题 - 导航栏 */
+
+.header .right-title {
+	width: 30%;
+	min-width: 270px;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	align-items: stretch;
+	-webkit-align-items: stretch;
+}
+
+
+/* 导航栏内项目 */
+
+.title-items {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	text-align: center;
+	font-family: "方正喵呜体";
+	border-bottom: solid 0.15em rgba(240, 240, 240, 0.1);
+	border-radius: 0.15em;
+}
+
+
+/* 选中导航栏中的项目 */
+
+.title-items:hover {
+	border-bottom: solid 0.15em black;
+	cursor: pointer;
+	background: -webkit-linear-gradient(rgba(240, 240, 240, 0.75), rgba(150, 150, 150, 0.75));
+	background: -moz-linear-gradient(rgba(240, 240, 240, 0.75), rgba(150, 150, 150, 0.75));
+	background: -o-linear-gradient(rgba(240, 240, 240, 0.75), rgba(150, 150, 150, 0.75));
+	background: linear-gradient(rgba(240, 240, 240, 0.75), rgba(150, 150, 150, 0.75));
+	animation: tada 1s;
+}
+
+
+/* 主容器 */
+
+.container {
+	width: 100%;
+	background-color: white;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	align-items: flex-start;
+	-webkit-align-items: flex-start;
+}
+
+
+/* 图标 */
+
+.icon {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 30px;
+	top: 0.55em;
+}
+
+
+/* 页脚 */
+
+.footer {
+	width: 95%;
+	text-align: center;
+}
+
+.pay {
+	font-family: "蝴蝶特效围绕体";
+}
+
+
+/* 清除浮动 */
+
+.clearfix {
+	clear: both;
+}
+
+
+/* 100 - 640像素 */
+
+@media screen and (min-width: 100px) and (max-width: 640px) {
+	.header {
+		font-size: 105%;
+		flex-direction: column;
+		-webkit-flex-direction: column;
+		align-items: center;
+		-webkit-align-items: center;
+		text-align: center;
+	}
+	.header .right-title {
+		font-size: 110%;
+	}
+	.title-items {
+		padding: 0 1%;
+	}
+	.nav-blocks {
+		width: 24%;
+		padding: 0.5% 0.5%;
+	}
+	.nav-blocks-item {
+		padding: 0 0.5%;
+	}
+	.nav-blocks-item div {
+		padding: 0.5% 0;
+	}
+	.container {
+		padding: 1% 0;
+		flex-direction: column;
+		-webkit-flex-direction: column;
+		min-width: 320px;
+	}
+	.container>ul {
+		width: 100%;
+	}
+	/* 主体部分 */
+	.main-body {
+		width: 100%;
+	}
+	.alert {
+		width: 80%;
+	}
+	.alert-img {
+		width: 95%;
+	}
+	.alert-header {
+		padding: 3% 6%;
+	}
+	.alert-container {
+		padding: 3% 0;
+	}
+	.alert-container img, .alert-container-img img {
+		height: 90%;
+	}
+	.alert-container figure {
+		height: 13em;
+	}
+	.alert-container-img figure {
+		height: 22em;
+	}
+}
+
+
+/* 640 - 1280像素 */
+
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+	.header {
+		font-size: 110%;
+	}
+	.header .left-title {
+		padding: 0.5% 0;
+		font-size: 110%;
+	}
+	.header .right-title {
+		font-size: 115%;
+	}
+	.title-items {
+		padding: 0 2%;
+	}
+	.nav-blocks {
+		width: 23.6%;
+		padding: 0.3% 0.7%;
+	}
+	.nav-blocks-item {
+		padding: 0 0.7%;
+	}
+	.nav-blocks-item div {
+		padding: 0.7% 0;
+	}
+	.tab-header {
+		font-size: 110%;
+	}
+	.container {
+		width: 99.5%;
+		padding: 1.6% 0;
+	}
+	/* 主体部分 */
+	.main-body {
+		width: 70%;
+	}
+	.pay {
+		font-size: 105%;
+	}
+	.alert-header {
+		padding: 2.7% 3%;
+	}
+	.alert-container {
+		padding: 2.7% 0;
+	}
+	.alert {
+		width: 60%;
+	}
+	.alert-img {
+		width: 90%;
+	}
+	.alert-container img, .alert-container-img img {
+		height: 91%;
+	}
+	.alert-container figure {
+		height: 15em;
+	}
+	.alert-container-img figure {
+		height: 30em;
+	}
+}
+
+
+/* 1280像素以上 */
+
+@media screen and (min-width: 1280px) {
+	.header {
+		font-size: 115%;
+	}
+	.header .left-title {
+		padding: 1% 0;
+		font-size: 115%;
+	}
+	.header .right-title {
+		font-size: 120%;
+	}
+	.title-items {
+		padding: 0 3%;
+	}
+	.nav-blocks {
+		width: 23%;
+		padding: 0.2% 1%;
+	}
+	.nav-blocks-item {
+		padding: 0 1%;
+	}
+	.nav-blocks-item div {
+		padding: 1% 0;
+	}
+	.tab-header {
+		font-size: 120%;
+	}
+	.container {
+		width: 99.5%;
+		padding: 0.8% 0;
+	}
+	/* 主体部分 */
+	.main-body {
+		width: 80%;
+	}
+	.pay {
+		font-size: 110%;
+	}
+	.alert {
+		width: 40%;
+	}
+	.alert-img {
+		width: 85%;
+	}
+	.alert-container {
+		padding: 2.5% 0;
+	}
+	.alert-header {
+		padding: 2.5% 1.5%;
+	}
+	.alert-container img, .alert-container-img img {
+		height: 92%;
+	}
+	.alert-container figure {
+		height: 17em;
+	}
+	.alert-container-img figure {
+		height: 34em;
+	}
+}
