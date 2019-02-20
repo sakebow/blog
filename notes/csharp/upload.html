@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>上传文件</title>
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<link rel="stylesheet" href="../../css/document.css" />
+		<link rel="stylesheet" href="../../css/fonts.css" />
+		<link rel="stylesheet" href="../../css/general.css" />
+		<link rel="stylesheet" href="../../js/layui/css/layui.css" />
+		<script type="text/javascript" src="../../js/layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+			layui.use('code', function() {
+				layui.code();
+			});
+		</script>
+		<script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../../js/custom/layout.js"></script>
+	</head>
+
+	<body>
+		<div class="bg alert-hide">
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closePay">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的支付宝.jpg" />
+						<figcaption>支付宝收款码</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信收款.png" />
+						<figcaption>微信收款码</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert alert-hide">
+				<div class="alert-header">
+					<div id="closeCall">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure>
+						<img src="../../img/pay/柳景兴的QQ账号.jpg" />
+						<figcaption>QQ</figcaption>
+					</figure>
+					<figure>
+						<img src="../../img/pay/柳景兴的微信账号.png" />
+						<figcaption>微信</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="alert-img alert-hide">
+				<div class="alert-header">
+					<div id="closeImg">关闭</div>
+				</div>
+				<div class="alert-container">
+					<figure style="height: 34em;">
+						<img src="" id="showImg" />
+						<figcaption></figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="left-title">
+				<h1>柳景兴的个人博客</h1>
+			</div>
+			<div class="right-title">
+				<div class="title-items">
+					<a href="../../index.html">首页</a>
+				</div>
+				<div class="title-items">联系方式</div>
+				<div class="title-items">打赏</div>
+			</div>
+		</div>
+		<div class="container">
+			<ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo">
+				<li class="layui-nav-item">
+					<a>目录</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>JavaScript<img src="../../img/icon/javascript.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="useJson.html">Json数据的使用</a>
+									</dd>
+									<dd>
+										<a href="getJson.html">Json数据的获取</a>
+									</dd>
+									<dd>
+										<a>Json数据的发送</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C#<img src="../../img/icon/csharp.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a href="dotNetMVC.html">.Net环境下的MVC框架</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>学生成绩管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a href="operateDatabase.html">对数据库的操作</a>
+												</dd>
+												<dd>
+													<li class="layui-nav-item">
+														<a>业务操作中的重点</a>
+														<dl class="layui-nav-child">
+															<dd>
+																<a href="signInWithValidation.html">登录和验证</a>
+															</dd>
+															<dd>
+																<a href="upload.html">上传文件</a>
+															</dd>
+															<dd>
+																<a>学生打分</a>
+															</dd>
+															<dd>
+																<a>国家-省份-城市-区县的四级联动</a>
+															</dd>
+														</dl>
+													</li>
+												</dd>
+												<dd>
+													<a>分页插件的使用</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<a>学生学分管理系统</a>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>Java<img src="../../img/icon/java.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<a>网易云音乐的开发者通道</a>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>纯Servlet的图书管理系统</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>环境搭建说明</a>
+												</dd>
+												<dd>
+													<a>前后台交互方式介绍</a>
+												</dd>
+												<dd>
+													<a>不使用插件的分页</a>
+												</dd>
+												<dd>
+													<a>web.xml的配置</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+					<dl class="layui-nav-child">
+						<dd>
+							<li class="layui-nav-item">
+								<a>C<img src="../../img/icon/c.png" class="icon" /></a>
+								<dl class="layui-nav-child">
+									<dd>
+										<li class="layui-nav-item">
+											<a>面向对象思想的借鉴</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>面向对象思想简介</a>
+												</dd>
+												<dd>
+													<a>从整体到局部的解析</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+									<dd>
+										<li class="layui-nav-item">
+											<a>对节点的操作</a>
+											<dl class="layui-nav-child">
+												<dd>
+													<a>查找节点</a>
+												</dd>
+												<dd>
+													<a>修改节点</a>
+												</dd>
+												<dd>
+													<a>添加节点</a>
+												</dd>
+												<dd>
+													<a>删除节点</a>
+												</dd>
+											</dl>
+										</li>
+									</dd>
+								</dl>
+							</li>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="main-body">
+				<div class="doc">
+					<div class="doc-title">
+						<div class="doc-title-article">上传文件</div>
+						<div class="doc-title-author">
+							<div>作者：柳景兴</div>
+							<div>日期：2019年2月19日16点34分</div>
+							<div>关键词：.Net 上传文件 路径保存</div>
+						</div>
+					</div>
+					<hr />
+					<div class="doc-content">
+						<p>
+							注：接下来的例子会将上一讲的所有部分全部删掉，如果你是从前面跳过来的，完全不用担心看不懂，这是从建好空的MVC框架项目之后开始讲的。如果你不不知道如何从零开始新建项目，还请跳回去看看：
+							<a href="dotNetMVC.html">.Net环境下的MVC框架</a>
+						</p>
+						<p>
+							在实际情景中我们往往会遇到个性化头像的需求。那么问题来了，访问的网页资源全都是服务器的，图片却是你自己的。怎么样才可以把你的图片放到服务器上？别担心，微软依旧帮你留了接口。
+						</p>
+						<div class="doc-content-quote">
+							<div class="doc-content-sub-title">首先需要一个上传文件的控件</div>
+							<p>
+								我们都知道，input控件的type属性有一个选项是file，这个是专门上传文件的。与此同时，需要上传文件的时候，form表单的enctype属性需要设置为“multipart/form-data”，否则后台无法接收对应的文件信息。会有一些人觉得multipart、form-data和/都有空格会好看一点，但是这样是不行的，必须是紧挨着的才可以。
+							</p>
+							<pre class="layui-code" lay-title="前端需要的东西" lay-encode="false">
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="uploadFile" class="form-control" />
+    <input type="submit" value="上传文件" />
+}</pre>
+							<p>
+								上传的目的自然是需要服务器能够保存我上传的图片，找个路径把他埋了。于是我准备放入项目文件夹下的images文件中。这就出现了一系列的问题：怎么找到项目文件夹？images这个文件夹存不存在？放心，项目文件夹通过Server.MapPath()访问，括号中添加字符串表示下级文件夹的名称。然后再通过Directory静态类中的Exists方法判断路径是否存在，不存在就使用Create方法新建。
+							</p>
+							<pre class="layui-code" lay-title="前端需要的东西" lay-encode="false">
+public class HomeController : Controller
+{
+    public ActionResult Index()
+    {
+        return View();
+    }
+    [HttpPost]
+    public ActionResult Index(HttpPostedFileBase uploadFile) // 将需要传输数据的控件的name属性一个个当作参数放进来
+    {
+        string folder = Server.MapPath("~/images/"); // 当前项目文件夹下的images文件夹
+        if (!Directory.Exists(folder)) // 这个文件夹是否存在
+        {
+            Directory.CreateDirectory(folder); // 不存在 -> 创建文件夹
+        }
+        return View();
+    }
+}</pre>
+							<p>
+								接下来就是保存了，给这个文件命个名吧。随意取名为“upload”。那么文件后缀名呢？刚刚我们将uploadFile拿到了，使用uploadFile.FileName就能拿到上传的包含后缀名的完整文件名了。剩下的就是通过字符串操作将后缀名和自定义的文件名连接起来了。
+							</p>
+							<pre class="layui-code" lay-title="前端需要的东西" lay-encode="false">
+public class HomeController : Controller
+{
+    public ActionResult Index()
+    {
+        return View();
+    }
+    [HttpPost]
+    public ActionResult Index(HttpPostedFileBase uploadFile) // 将需要传输数据的控件的name属性一个个当作参数放进来
+    {
+        uploadFile = Request.Files["uploadFile"];
+        string folder = Server.MapPath("~/images/"); // 当前项目文件夹下的images文件夹
+        if (!Directory.Exists(folder)) // 这个文件夹是否存在
+        {
+            Directory.CreateDirectory(folder); // 不存在 -> 创建文件夹
+        }
+        // 将从最后出现的'.'作为起始位置，将FileName分成两半，去后半段拓展名部分。
+        // 将保存文件夹路径、自定义文件名称和文件拓展名连接在一起，合成完整的文件的保存路径。
+        string fileName = folder + "upload" + uploadFile.FileName.Substring(uploadFile.FileName.LastIndexOf('.'));
+        // 结束
+        return View();
+    }
+}</pre>
+							<p>接下来就是保存了。直接使用saveAs方法就可以了。</p>
+<pre class="layui-code" lay-title="前端需要的东西" lay-encode="false">
+public class HomeController : Controller
+{
+    public ActionResult Index()
+    {
+        return View();
+    }
+    [HttpPost]
+    public ActionResult Index(HttpPostedFileBase uploadFile) // 将需要传输数据的控件的name属性一个个当作参数放进来
+    {
+        uploadFile = Request.Files["uploadFile"];
+        string folder = Server.MapPath("~/images/"); // 当前项目文件夹下的images文件夹
+        if (!Directory.Exists(folder)) // 这个文件夹是否存在
+        {
+            Directory.CreateDirectory(folder); // 不存在 -> 创建文件夹
+        }
+        // 将从最后出现的'.'作为起始位置，将FileName分成两半，去后半段拓展名部分。
+        // 将保存文件夹路径、自定义文件名称和文件拓展名连接在一起，合成完整的文件的保存路径。
+        string fileName = folder + "upload" + uploadFile.FileName.Substring(uploadFile.FileName.LastIndexOf('.'));
+        // 保存
+        uploadFile.SaveAs(fileName);
+        // 结束
+        return View();
+    }
+}</pre>
+							<div class="doc-images-frame">
+								<figure>
+									<img src="../../img/notes/csharp/upload1.png" />
+									<figcaption>开始界面</figcaption>
+								</figure>
+								<figure>
+									<img src="../../img/notes/csharp/upload2.png"/>
+									<figcaption>上传窗口</figcaption>
+								</figure>
+								<figure>
+									<img src="../../img/notes/csharp/upload3.png" />
+									<figcaption>点击确认之后</figcaption>
+								</figure>
+							</div>
+						</div>
+						<p>
+							当然这个例子是非常简单的例子，因为你会发现：重复提交会覆盖、超过一定大小会报错、提交成功与否没有反馈，可以说用户体验是非常的差了。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="footer">
+			<div class="pay">如果你觉得非常不错，可以选择点击右上角进行打赏。</div>
+		</div>
+	</body>
+
+</html>
